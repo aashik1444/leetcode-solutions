@@ -6,4 +6,5 @@ class Solution:
         for n in prices:
             max_profit = max(max_profit, n - i)
             i = min(i, n)
+            
         return max_profit
