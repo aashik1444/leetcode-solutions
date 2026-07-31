@@ -3,12 +3,15 @@ class Solution:
         longest = 0
         i = 0
         sett = set()
-        n = len(s)
-        for j in range(n):
+    
+        for j in range(len(s)):
+
             while s[j] in sett:
                 sett.remove(s[i])
                 i += 1
-            w = (j - i) + 1
-            longest = max(longest, w)
+
+            
+            longest = max(longest, (j - i) + 1)
             sett.add(s[j])
+
         return longest
