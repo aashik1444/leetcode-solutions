@@ -1,7 +1,7 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        hashmap = {')':'(', '}':'{', ']':'['}
         stk = []
+        hashmap = {'}':'{', ')':'(', ']':'['}
 
         for c in s:
             if c not in hashmap:
@@ -13,5 +13,5 @@ class Solution:
                     popped = stk.pop()
                     if popped != hashmap[c]:
                         return False
-
+        
         return not stk
