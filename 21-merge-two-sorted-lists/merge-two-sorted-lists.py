@@ -16,7 +16,8 @@ class Solution:
             else:
                 c.next = list2
                 c = list2
-                list2 = list2.next
-
+                list2= list2.next
+        
         c.next = list1 if list1 else list2
+
         return d.next
