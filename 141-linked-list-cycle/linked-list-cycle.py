@@ -8,13 +8,13 @@ class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         d = ListNode
         d.next = head
-        s,f = d, d
+        s = f = d
 
         while f and f.next:
-            s = s.next
             f = f.next.next
+            s = s.next
 
             if s is f:
                 return True
-    
+
         return False
