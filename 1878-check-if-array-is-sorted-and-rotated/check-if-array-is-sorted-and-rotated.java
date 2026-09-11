@@ -13,8 +13,7 @@ class Solution {
 
             
         }
-        if (d > 1) return false;
-        else return true;
+        return (d > 1) ? false:true;
         
     }
 }
